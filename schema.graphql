@@ -1,0 +1,10 @@
+type CreateEvent @entity {
+  id: ID!
+  contract: Bytes! # the EOA that initiated the txn
+  optionId: BigInt! # uint256
+  account: Bytes! # address
+  settlementFee:BigInt!
+  totalFee:BigInt!
+  blockNumber: BigInt!
+  timestamp: BigInt!  
+}

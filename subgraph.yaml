@@ -1,0 +1,88 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: RisqLINKOptions
+    network: matic
+    source:
+      address: "0x54fA24438370b5e7F64a1C78319d0c1048d14711"
+      abi: RisqLINKOptions
+      startBlock: 20645248
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Create
+      abis:
+        - name: RisqLINKOptions
+          file: ./abis/RisqLINKOptions.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+      file: ./src/mapping.ts
+
+  - kind: ethereum/contract
+    name: RisqETHOptions
+    network: matic
+    source:
+      address: "0x209Ee82429FD4e26251ed01771338C94fCbAF717"
+      abi: RisqLINKOptions
+      startBlock: 20645248
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Create
+      abis:
+        - name: RisqLINKOptions
+          file: ./abis/RisqLINKOptions.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+      file: ./src/mapping.ts
+
+  - kind: ethereum/contract
+    name: RisqWBTCOptions
+    network: matic
+    source:
+      address: "0xE1ffBB1999a5AB58c3cd8343823CE8E87A53e656"
+      abi: RisqLINKOptions
+      startBlock: 20645248
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Create
+      abis:
+        - name: RisqLINKOptions
+          file: ./abis/RisqLINKOptions.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+      file: ./src/mapping.ts
+
+  - kind: ethereum/contract
+    name: RisqMATICOptions
+    network: matic
+    source:
+      address: "0x3f0c9d54418B569820DA42CE68c1a02ae696b98F"
+      abi: RisqLINKOptions
+      startBlock: 20645248
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Create
+      abis:
+        - name: RisqLINKOptions
+          file: ./abis/RisqLINKOptions.json
+      eventHandlers:
+        - event: Create(indexed uint256,indexed address,uint256,uint256)
+          handler: handleCreate
+      file: ./src/mapping.ts
+ 
